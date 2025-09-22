@@ -9,7 +9,7 @@ async function generateResponse(prompt) {
 
     const model = genAI.getGenerativeModel({
       model: "gemini-2.5-flash",
-      systemInstruction: `You are a code reviewer and complexity analyser.Give Short and easy to understand response. Look at the code provided and analyse its complexity tell whetre the code can be improved and what could be its optimal approach.` 
+      systemInstruction: `Don't give too long response. You are a code reviewer and complexity analyser.Give Short and easy to understand response. Look at the code provided and analyse its complexity tell whetre the code can be improved and what could be its optimal approach.` 
     });
 
     const result = await model.generateContent(prompt);
